@@ -7,8 +7,10 @@
   cursor: pointer;
 }
 
-.piece:hover {
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .piece:hover {
+    opacity: 1;
+  }
 }
 
 .bgblue {

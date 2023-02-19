@@ -1,11 +1,11 @@
-import React from "react";
+import React, { RefObject } from "react";
 import { Color } from "../../types/color";
 import styles from "./styles.module.css";
 
 interface PieceProps {
   color: Color;
-  refElement: React.RefObject<HTMLDivElement>;
-  handleClick: any;
+  refElement: RefObject<HTMLDivElement>;
+  handleClick: (ref: React.RefObject<HTMLDivElement>) => void;
 }
 
 const Piece: React.FC<PieceProps> = React.forwardRef<

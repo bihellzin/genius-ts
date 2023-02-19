@@ -1,8 +1,8 @@
-import { RefObject, useEffect, useRef, useState } from "react";
 import _ from "lodash";
+import { RefObject, useEffect, useRef, useState } from "react";
 import "./App.css";
-import { Color } from "./types/color";
 import Piece from "./components/Piece/Piece";
+import { Color } from "./types/color";
 
 function App() {
   const [correctSequence, setCorrectSequence] = useState<
