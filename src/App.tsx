@@ -1,8 +1,8 @@
-import { RefObject, useEffect, useRef, useState } from 'react';
-import _ from 'lodash';
-import './App.css';
-import { Color } from './types/color';
-import Piece from './components/Piece/Piece';
+import { RefObject, useEffect, useRef, useState } from "react";
+import _ from "lodash";
+import "./App.css";
+import { Color } from "./types/color";
+import Piece from "./components/Piece/Piece";
 
 function App() {
   const [correctSequence, setCorrectSequence] = useState<
@@ -57,8 +57,8 @@ function App() {
   function animate(): void {
     correctSequence.forEach((reference, index) => {
       setTimeout(() => {
-        reference.current?.classList.add('hidden');
-        setTimeout(() => reference.current?.classList.remove('hidden'), 1000);
+        reference.current?.classList.add("hidden");
+        setTimeout(() => reference.current?.classList.remove("hidden"), 1000);
       }, (index + 1) * 1200);
     });
   }
@@ -88,17 +88,15 @@ function App() {
       {!gameFinished && (
         <>
           <h1>Round: {round}</h1>
-          <div style={{ display: 'flex', columnGap: 10 }}>
-            <button
-              style={{ visibility: gameStarted ? 'hidden' : 'unset' }}
-              onClick={() => {
-                createSequence();
-                setGameStarted((prev) => !prev);
-              }}
-            >
-              Start
-            </button>
-          </div>
+          <button
+            style={{ visibility: gameStarted ? "hidden" : "unset" }}
+            onClick={() => {
+              createSequence();
+              setGameStarted((prev) => !prev);
+            }}
+          >
+            Start
+          </button>
           <Piece
             handleClick={handleClick}
             refElement={bluePieceRef}
