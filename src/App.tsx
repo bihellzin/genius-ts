@@ -57,8 +57,8 @@ function App() {
   function animate(): void {
     correctSequence.forEach((reference, index) => {
       setTimeout(() => {
-        reference.current?.classList.add("hidden");
-        setTimeout(() => reference.current?.classList.remove("hidden"), 1000);
+        reference.current?.classList.add("shine");
+        setTimeout(() => reference.current?.classList.remove("shine"), 1000);
       }, (index + 1) * 1200);
     });
   }
@@ -88,15 +88,16 @@ function App() {
       {!gameFinished && (
         <>
           <h1>Round: {round}</h1>
-          <button
-            style={{ visibility: gameStarted ? "hidden" : "unset" }}
-            onClick={() => {
-              createSequence();
-              setGameStarted((prev) => !prev);
-            }}
-          >
-            Start
-          </button>
+          {!gameStarted && (
+            <button
+              onClick={() => {
+                createSequence();
+                setGameStarted((prev) => !prev);
+              }}
+            >
+              Start
+            </button>
+          )}
           <Piece
             handleClick={handleClick}
             refElement={bluePieceRef}

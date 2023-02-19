@@ -1,6 +1,6 @@
-import React from 'react';
-import { Color } from '../../types/color';
-import styles from './styles.module.css';
+import React from "react";
+import { Color } from "../../types/color";
+import styles from "./styles.module.css";
 
 interface PieceProps {
   color: Color;
@@ -11,7 +11,7 @@ interface PieceProps {
 const Piece: React.FC<PieceProps> = React.forwardRef<
   HTMLDivElement,
   PieceProps
->(({ color, refElement, handleClick }, ref) => {
+>(({ color, refElement, handleClick }) => {
   return (
     <div
       onClick={() => handleClick(refElement)}
