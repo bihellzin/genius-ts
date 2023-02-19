@@ -1,0 +1,28 @@
+.piece {
+  width: 140px;
+  min-width: 140px;
+  min-height: 140px;
+  opacity: 0.3;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.piece:hover {
+  opacity: 1;
+}
+
+.bgblue {
+  background-color: #083d77;
+}
+
+.bggreen {
+  background-color: #00cc66;
+}
+
+.bgred {
+  background-color: #e84855;
+}
+
+.bgyellow {
+  background-color: #f9dc5c;
+}
