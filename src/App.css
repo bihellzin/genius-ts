@@ -59,6 +59,10 @@
   animation: opacityAnimation 1s;
 }
 
+.shinefaster {
+  animation: opacityAnimation 0.5s;
+}
+
 .App {
   display: flex;
   flex-direction: column;

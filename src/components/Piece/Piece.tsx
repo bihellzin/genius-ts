@@ -13,10 +13,8 @@ const Piece: React.FC<PieceProps> = React.forwardRef<
   PieceProps
 >(({ color, refElement, handleClick }, _ref) => {
   const animatePiece = () => {
-    setTimeout(() => {
-      refElement.current?.classList.add("shine");
-      setTimeout(() => refElement.current?.classList.remove("shine"), 1000);
-    });
+    refElement.current?.classList.add("shinefaster");
+    setTimeout(() => refElement.current?.classList.remove("shinefaster"), 500);
   };
 
   return (
