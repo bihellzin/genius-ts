@@ -98,26 +98,28 @@ function App() {
               Start
             </button>
           )}
-          <Piece
-            handleClick={handleClick}
-            refElement={bluePieceRef}
-            color={Color.Blue}
-          />
-          <Piece
-            handleClick={handleClick}
-            refElement={greenPieceRef}
-            color={Color.Green}
-          />
-          <Piece
-            handleClick={handleClick}
-            refElement={redPieceRef}
-            color={Color.Red}
-          />
-          <Piece
-            handleClick={handleClick}
-            refElement={yellowPieceRef}
-            color={Color.Yellow}
-          />
+          <div className="game">
+            <Piece
+              handleClick={handleClick}
+              refElement={bluePieceRef}
+              color={Color.Blue}
+            />
+            <Piece
+              handleClick={handleClick}
+              refElement={greenPieceRef}
+              color={Color.Green}
+            />
+            <Piece
+              handleClick={handleClick}
+              refElement={redPieceRef}
+              color={Color.Red}
+            />
+            <Piece
+              handleClick={handleClick}
+              refElement={yellowPieceRef}
+              color={Color.Yellow}
+            />
+          </div>
         </>
       )}
       {gameFinished && (

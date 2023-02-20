@@ -1,10 +1,12 @@
 .piece {
-  width: 140px;
   min-width: 140px;
   min-height: 140px;
   opacity: 0.3;
   transition: 0.3s;
   cursor: pointer;
+  border: 160px solid;
+  background-color: transparent;
+  border-radius: 0;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -13,18 +15,30 @@
   }
 }
 
-.bgblue {
-  background-color: #083d77;
+.bluepiece {
+  border-color: #083d77;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-top-left-radius: 100%;
 }
 
-.bggreen {
-  background-color: #00cc66;
+.greenpiece {
+  border-color: #00cc66;
+  border-left-width: 0;
+  border-bottom-width: 0;
+  border-top-right-radius: 100%;
 }
 
-.bgred {
-  background-color: #e84855;
+.redpiece {
+  border-color: #e84855;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-left-radius: 100%;
 }
 
-.bgyellow {
-  background-color: #f9dc5c;
+.yellowpiece {
+  border-color: #f9dc5c;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-bottom-right-radius: 100%;
 }

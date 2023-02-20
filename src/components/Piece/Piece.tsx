@@ -22,7 +22,7 @@ const Piece: React.FC<PieceProps> = React.forwardRef<
       onClick={() => handleClick(refElement)}
       onTouchStart={animatePiece}
       ref={refElement}
-      className={`${styles.piece} ${styles[`bg${color}`]}`}
+      className={`${styles.piece} ${styles[`${color}piece`]}`}
     ></div>
   );
 });
