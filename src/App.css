@@ -73,3 +73,72 @@
 body {
   background-color: #fcf7ff;
 }
+
+.game {
+  display: flex;
+  flex-wrap: wrap;
+  border: 10px solid black;
+  width: 280px;
+}
+
+.game2 {
+  width: 408px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 0;
+}
+
+.piece {
+  width: 204px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.piece:hover {
+  /* display: none; */
+}
+
+.piece1 {
+  transform: rotate(180deg);
+  filter: invert(15%) sepia(24%) saturate(7050%) hue-rotate(200deg)
+    brightness(92%) contrast(94%) opacity(0.4);
+}
+
+.piece1:hover {
+  filter: invert(15%) sepia(24%) saturate(7050%) hue-rotate(200deg)
+    brightness(92%) contrast(94%) opacity(1);
+}
+.piece2 {
+  transform: rotate(-90deg);
+  filter: invert(51%) sepia(91%) saturate(1057%) hue-rotate(108deg)
+    brightness(95%) contrast(101%) opacity(0.4);
+}
+
+.piece2:hover {
+  filter: invert(51%) sepia(91%) saturate(1057%) hue-rotate(108deg)
+    brightness(95%) contrast(101%) opacity(1);
+}
+.piece3 {
+  transform: rotate(90deg);
+  filter: invert(39%) sepia(92%) saturate(1136%) hue-rotate(325deg)
+    brightness(90%) contrast(102%) opacity(0.4);
+}
+
+.piece3:hover {
+  filter: invert(39%) sepia(92%) saturate(1136%) hue-rotate(325deg)
+    brightness(90%) contrast(102%) opacity(1);
+}
+
+.piece4 {
+  filter: invert(80%) sepia(79%) saturate(368%) hue-rotate(345deg)
+    brightness(102%) contrast(95%) opacity(0.4);
+}
+
+.piece4:hover {
+  filter: invert(80%) sepia(79%) saturate(368%) hue-rotate(345deg)
+    brightness(102%) contrast(95%) opacity(1);
+}
+
+img > svg {
+  display: none;
+}
