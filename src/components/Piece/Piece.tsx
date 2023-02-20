@@ -11,10 +11,18 @@ interface PieceProps {
 const Piece: React.FC<PieceProps> = React.forwardRef<
   HTMLDivElement,
   PieceProps
->(({ color, refElement, handleClick }) => {
+>(({ color, refElement, handleClick }, _ref) => {
+  const animatePiece = () => {
+    setTimeout(() => {
+      refElement.current?.classList.add("shine");
+      setTimeout(() => refElement.current?.classList.remove("shine"), 1000);
+    });
+  };
+
   return (
     <div
       onClick={() => handleClick(refElement)}
+      onTouchStart={animatePiece}
       ref={refElement}
       className={`${styles.piece} ${styles[`bg${color}`]}`}
     ></div>
