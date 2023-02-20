@@ -101,11 +101,6 @@ function App() {
           <div className="game">
             <Piece
               handleClick={handleClick}
-              refElement={bluePieceRef}
-              color={Color.Blue}
-            />
-            <Piece
-              handleClick={handleClick}
               refElement={greenPieceRef}
               color={Color.Green}
             />
@@ -118,6 +113,11 @@ function App() {
               handleClick={handleClick}
               refElement={yellowPieceRef}
               color={Color.Yellow}
+            />
+            <Piece
+              handleClick={handleClick}
+              refElement={bluePieceRef}
+              color={Color.Blue}
             />
           </div>
         </>
